@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="Test on Firefox(failed)" parallel="tests">
+    <parameter name="browsername" value="Firefox"/>
+    <classes>
+      <class name="basicsanity.Basicsanity">
+        <methods>
+          <include name="launchapplication" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- basicsanity.Basicsanity -->
+    </classes>
+  </test> <!-- Test on Firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
