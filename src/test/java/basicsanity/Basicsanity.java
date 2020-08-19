@@ -1,6 +1,6 @@
 package basicsanity;
 
-import java.util.concurrent.TimeUnit;
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 
 
@@ -31,7 +32,7 @@ public class Basicsanity {
 			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
 			driver.get("https://example.testproject.io/web/");
-			
+
 			//logger.error("testproject application launched");
 			System.out.println("Successfully launched in chrome and title is  " + driver.getTitle());
 			driver.quit();
@@ -41,7 +42,7 @@ public class Basicsanity {
 			WebDriverManager.iedriver().setup();	
 			driver= new InternetExplorerDriver();
 			driver.get("https://example.testproject.io/web/");
-		
+
 			System.out.println("Successfully launched in IE and title is   " +  driver.getTitle());
 			driver.quit();
 		}
@@ -50,11 +51,22 @@ public class Basicsanity {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.get("https://example.testproject.io/web/");
-			
+
 			System.out.println("Successfully launched in firefox and title is   " + driver.getTitle());
 			driver.quit();
-			
+
 		}
+		/*else if(browsername.equalsIgnoreCase("HTML"))
+		{
+
+			driver = new HtmlUnitDriver();
+
+			driver.get("https://example.testproject.io/web/");
+
+			System.out.println("Successfully launched in headless browser and title is   " + driver.getTitle());
+			driver.quit();
+
+		}*/
 	}
 
 
