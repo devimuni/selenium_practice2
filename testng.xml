@@ -1,42 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="4">
+<suite name="Suite">
+
+	<listeners>
+
+		<listener
+			class-name="utilites.Listeners" />
+
+	</listeners>
 
 
 	<test name="Test on chrome">
+	
 		<parameter name="browsername" value="chrome" />
 		<classes>
-			<class name="basicsanity.Basicsanity" />
+			<class name="tests.Logingurusite" />
 		</classes>
 	</test>
-
-
-
-	<test name="Test on IE">
-		<parameter name="browsername" value="IE" />
-		<classes>
-			<class name="basicsanity.Basicsanity" />
-		</classes>
-	</test>
-
-
-
-
-	<test name="Test on Firefox">
-		<parameter name="browsername" value="Firefox" />
-		<classes>
-			<class name="basicsanity.Basicsanity" />
-		</classes>
-	</test>
-
-	<test name="Test on HTML">
-		<parameter name="browsername" value="HTML" />
-		<classes>
-			<class name="basicsanity.Basicsanity" />
-		</classes>
-	</test>
-
-
-
 
 </suite> 

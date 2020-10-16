@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test name="Test on IE(failed)" parallel="tests">
-    <parameter name="browsername" value="IE"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="utilites.Listeners"/>
+  </listeners>
+  <test name="Test on chrome(failed)">
+    <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="basicsanity.Basicsanity">
+      <class name="tests.Logingurusite">
         <methods>
-          <include name="launchapplication" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="loginTest" invocation-numbers="0 2 3"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- basicsanity.Basicsanity -->
+      </class> <!-- tests.Logingurusite -->
     </classes>
-  </test> <!-- Test on IE(failed) -->
-  <test name="Test on Firefox(failed)" parallel="tests">
-    <parameter name="browsername" value="Firefox"/>
-    <classes>
-      <class name="basicsanity.Basicsanity">
-        <methods>
-          <include name="launchapplication" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- basicsanity.Basicsanity -->
-    </classes>
-  </test> <!-- Test on Firefox(failed) -->
+  </test> <!-- Test on chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

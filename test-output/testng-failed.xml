@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="basicsanity.test1">
+      <class name="staleelementException.Example3_jenkins">
         <methods>
-          <include name="launchapplication"/>
+          <include name="jenkinautorefresh"/>
         </methods>
-      </class> <!-- basicsanity.test1 -->
+      </class> <!-- staleelementException.Example3_jenkins -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
